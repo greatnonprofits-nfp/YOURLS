@@ -1,0 +1,18 @@
+
+server {
+    server_name ~^.*$;
+
+    listen 80;
+
+    root /var/www/html;
+    index index.php index.html index.htm index.nginx-debian.html;
+
+    location / {
+        try_files $uri $uri/ /yourls-loader.php$is_args$args;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php8.0-fpm.sock;
+    }
+}

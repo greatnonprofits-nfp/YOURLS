@@ -48,3 +48,6 @@ Desktop.ini
 # NetBeans files
 /nbproject/
 .idea
+
+docker/current-config.php
+docker/.env

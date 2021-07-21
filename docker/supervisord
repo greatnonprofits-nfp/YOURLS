@@ -1,0 +1,4 @@
+[supervisord]
+
+[program:nginx]
+command = service nginx start
