@@ -15,6 +15,7 @@ RUN apt-get update \
         php8.0-mysql \
         default-mysql-client \
         supervisor \
+        nano \
     && apt-get clean
 
 RUN service supervisor restart
