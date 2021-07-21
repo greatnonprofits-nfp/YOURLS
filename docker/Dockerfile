@@ -36,6 +36,8 @@ RUN rm -f /etc/nginx/sites-enabled/default
 RUN mv /var/www/html/docker/nginx /var/www/html/docker/nginx.conf
 RUN mv /var/www/html/docker/supervisord /var/www/html/docker/supervisord.conf
 
+RUN mv /var/www/html/docker/htaccess /var/www/html/.htaccess
+
 RUN ln -sf /var/www/html/docker/nginx.conf /etc/nginx/sites-enabled/
 
 RUN chown -R www-data:www-data /var/www/html

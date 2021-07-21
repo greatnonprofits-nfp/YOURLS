@@ -1,7 +1,4 @@
 [supervisord]
 
-[program:fpm]
-command = service php8.0-fpm start
-
 [program:nginx]
 command = service nginx start
